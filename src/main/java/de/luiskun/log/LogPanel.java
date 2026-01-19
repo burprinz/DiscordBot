@@ -10,7 +10,7 @@ public class LogPanel extends JPanel {
 
     private static DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
-    private static final int WIDTH = 700;
+    private static final int WIDTH = 900;
     private static final int HEIGHT = 500;
 
     private List<LogEntry> logs;

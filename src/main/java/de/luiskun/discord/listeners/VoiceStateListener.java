@@ -1,5 +1,6 @@
 package de.luiskun.discord.listeners;
 
+import de.luiskun.discord.soundboard.Soundboard;
 import de.luiskun.log.Log;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.channel.unions.AudioChannelUnion;
@@ -12,7 +13,22 @@ public class VoiceStateListener extends ListenerAdapter {
     @Override
     public void onGuildVoiceUpdate(@NotNull GuildVoiceUpdateEvent event) {
         super.onGuildVoiceUpdate(event);
+        handleDebugMessage(event);
 
+        Member member = event.getMember();
+        AudioChannelUnion before = event.getChannelLeft();
+        AudioChannelUnion after = event.getChannelJoined();
+
+        if (before == null && after != null) {
+            // User ist neu gejoint
+            if (member.getUser().getId().equals("392709166575255573")) {
+                Log.debug("Lucas joined -> playing <Mann vom TUS>");
+                Soundboard.play(event.getGuild(), after, "src/main/resources/sounds/mann_vom_tus.wav");
+            }
+        }
+    }
+
+    private void handleDebugMessage(GuildVoiceUpdateEvent event) {
         Member member = event.getMember();
         AudioChannelUnion before = event.getChannelLeft();
         AudioChannelUnion after = event.getChannelJoined();
@@ -37,7 +53,6 @@ public class VoiceStateListener extends ListenerAdapter {
             String discGuild = before.getGuild().getName();
             Log.debug(username + " left " + discName + " on " + discGuild);
         }
-
     }
 
 }

@@ -1,19 +1,22 @@
 package de.luiskun;
 
 import de.luiskun.discord.DiscordBot;
+import de.luiskun.league.DataPaths;
+import de.luiskun.league.LeagueAPI;
+import de.luiskun.league.Mastery;
 import de.luiskun.log.Log;
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.OnlineStatus;
-import net.dv8tion.jda.api.entities.Activity;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Main {
 
     private static DiscordBot discordBot;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {
@@ -26,11 +29,10 @@ public class Main {
         new Main();
     }
 
-    public Main() {
+    public Main() throws IOException {
         Log.info("Program started");
 
-        discordBot = new DiscordBot();
-        discordBot.start();
+        DiscordBot discordBot = new DiscordBot();
     }
 
 }
