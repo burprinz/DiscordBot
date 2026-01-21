@@ -1,0 +1,59 @@
+0	2026/01/20-15:56:31	Info	Program started
+1	2026/01/20-15:56:32	Debug	Discord-Bot starting...
+2	2026/01/20-15:56:34	Success	Discord-Bot started
+3	2026/01/20-15:56:44	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ?api_key=RGAPI-94cccb51-28c2-4435-953d-94861a4af43a
+4	2026/01/20-15:56:44	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ?api_key=RGAPI-94cccb51-28c2-4435-953d-94861a4af43a
+5	2026/01/20-15:57:24	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/pK-5AdDV1nmVF-f1tjYzGEtqSVproNQmDZZPqD-7lRbhHidTklJdBJ80M8i0cclMajyhVac8d0-kOQ?api_key=RGAPI-94cccb51-28c2-4435-953d-94861a4af43a
+6	2026/01/20-15:57:24	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/pK-5AdDV1nmVF-f1tjYzGEtqSVproNQmDZZPqD-7lRbhHidTklJdBJ80M8i0cclMajyhVac8d0-kOQ?api_key=RGAPI-94cccb51-28c2-4435-953d-94861a4af43a
+7	2026/01/20-16:40:44	Debug	floke137_2 joined Co-Learning Links on Albert 4
+8	2026/01/20-17:52:32	Debug	martoobre joined Duo Q on Minecraft yikes
+9	2026/01/20-17:52:33	Debug	martoobre left Duo Q on Minecraft yikes
+10	2026/01/20-18:03:16	Debug	floke137_2 left Co-Learning Links on Albert 4
+11	2026/01/20-18:12:11	Debug	martoobre joined Nippelkanal on Minecraft yikes
+12	2026/01/20-18:12:16	Debug	lr12 joined Nippelkanal on Minecraft yikes
+13	2026/01/20-18:12:16	Debug	Lucas joined -> playing <Mann vom TUS>
+14	2026/01/20-18:12:17	Debug	Luis-Kun Bot v2 joined Nippelkanal on Minecraft yikes
+15	2026/01/20-18:12:22	Debug	Luis-Kun Bot v2 left Nippelkanal on Minecraft yikes
+16	2026/01/20-18:12:26	Debug	felipe_8 joined Nippelkanal on Minecraft yikes
+17	2026/01/20-18:12:30	Debug	lr12 left Nippelkanal on Minecraft yikes
+18	2026/01/20-18:12:31	Debug	lr12 joined Nippelkanal on Minecraft yikes
+19	2026/01/20-18:12:31	Debug	Lucas joined -> playing <Mann vom TUS>
+20	2026/01/20-18:12:31	Debug	Luis-Kun Bot v2 joined Nippelkanal on Minecraft yikes
+21	2026/01/20-18:12:35	Debug	Luis-Kun Bot v2 left Nippelkanal on Minecraft yikes
+22	2026/01/20-18:14:17	Debug	kiba7504 joined Nippelkanal on Minecraft yikes
+23	2026/01/20-18:15:35	Debug	jellypopelly joined Nippelkanal on Minecraft yikes
+24	2026/01/20-18:29:08	Debug	kablobbel joined Nippelkanal on Minecraft yikes
+25	2026/01/20-18:32:08	Debug	luiskun left Co-Learning Links on Albert 4
+26	2026/01/20-18:32:08	Debug	floke137 left Co-Learning Links on Albert 4
+27	2026/01/20-18:41:25	Debug	luiskun joined Nippelkanal on Minecraft yikes
+28	2026/01/20-18:41:36	Debug	yoshimurar77 joined Nippelkanal on Minecraft yikes
+29	2026/01/20-19:09:33	Debug	pixlfelix joined Nippelkanal on Minecraft yikes
+30	2026/01/20-19:10:32	Debug	susscrofa joined Talk 1 on Zitronenbonbons
+31	2026/01/20-19:11:12	Debug	leanlasse joined Talk 1 on Zitronenbonbons
+32	2026/01/20-19:15:48	Debug	lr12 left Nippelkanal on Minecraft yikes
+33	2026/01/20-19:16:06	Debug	lr12 joined Nippelkanal on Minecraft yikes
+34	2026/01/20-19:16:06	Debug	Lucas joined -> playing <Mann vom TUS>
+35	2026/01/20-19:16:06	Debug	Luis-Kun Bot v2 joined Nippelkanal on Minecraft yikes
+36	2026/01/20-19:16:10	Debug	Luis-Kun Bot v2 left Nippelkanal on Minecraft yikes
+37	2026/01/20-19:16:58	Debug	pixlfelix left Nippelkanal on Minecraft yikes
+38	2026/01/20-19:19:41	Debug	pixlfelix joined Nippelkanal on Minecraft yikes
+39	2026/01/20-19:29:07	Debug	pixlfelix left Nippelkanal on Minecraft yikes
+40	2026/01/20-19:43:05	Debug	lr12 left Nippelkanal on Minecraft yikes
+41	2026/01/20-19:43:09	Debug	lr12 joined Nippelkanal on Minecraft yikes
+42	2026/01/20-19:43:09	Debug	Lucas joined -> playing <Mann vom TUS>
+43	2026/01/20-19:43:09	Debug	Luis-Kun Bot v2 joined Nippelkanal on Minecraft yikes
+44	2026/01/20-19:43:13	Debug	Luis-Kun Bot v2 left Nippelkanal on Minecraft yikes
+45	2026/01/20-19:54:00	Debug	felipe_8 left Nippelkanal on Minecraft yikes
+46	2026/01/20-19:54:03	Debug	felipe_8 joined Nippelkanal on Minecraft yikes
+47	2026/01/20-19:55:46	Debug	lr12 left Nippelkanal on Minecraft yikes
+48	2026/01/20-21:03:48	Debug	leanlasse left Talk 1 on Zitronenbonbons
+49	2026/01/20-21:03:48	Debug	susscrofa left Talk 1 on Zitronenbonbons
+50	2026/01/20-21:33:03	Debug	jellypopelly left Nippelkanal on Minecraft yikes
+51	2026/01/20-21:43:44	Debug	pixlfelix joined Nippelkanal on Minecraft yikes
+52	2026/01/20-21:45:13	Debug	pixlfelix left Nippelkanal on Minecraft yikes
+53	2026/01/20-21:59:45	Debug	pixlfelix joined Nippelkanal on Minecraft yikes
+54	2026/01/20-22:04:22	Debug	pixlfelix left Nippelkanal on Minecraft yikes
+55	2026/01/20-22:04:33	Debug	pixlfelix joined Nippelkanal on Minecraft yikes
+56	2026/01/20-22:09:29	Debug	kablobbel left Nippelkanal on Minecraft yikes
+57	2026/01/20-22:10:47	Debug	pixlfelix left Nippelkanal on Minecraft yikes
+58	2026/01/20-23:00:14	Debug	felipe_8 left Nippelkanal on Minecraft yikes

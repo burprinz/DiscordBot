@@ -64,7 +64,7 @@ public class LogPanel extends JPanel {
         y += 2;
 
         if (logs != null) {
-            int start = logs.size()-20;
+            int start = logs.size()-30;
             if (start < 0) start = 0;
             for (int i = start; i < this.logs.size(); i++) {
                 y += 16;

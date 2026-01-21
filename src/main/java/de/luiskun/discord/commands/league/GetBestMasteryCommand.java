@@ -1,8 +1,10 @@
 package de.luiskun.discord.commands.league;
 
 import de.luiskun.discord.commands.DiscordCommand;
+import de.luiskun.league.DataPaths;
 import de.luiskun.league.LeagueAPI;
 import de.luiskun.league.Mastery;
+import de.luiskun.log.Log;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
@@ -10,6 +12,8 @@ import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 
 import java.awt.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAccessor;
 import java.util.Arrays;
@@ -18,22 +22,35 @@ public class GetBestMasteryCommand implements DiscordCommand {
     @Override
     public void execute(String args, User user, Message message, MessageChannel channel, Guild guild) {
 
-        String[] spl = args.split(" ");
-        if (spl.length != 1 || spl[0].length() < 1 || !spl[0].contains("#")) {
-            channel.sendMessage("Command used wrongly! <!bestchamp name#ABC>").queue();
-            return;
+        String riotID;
+
+        if (message.getMentions().getUsers().size() == 1) {
+            User mention = message.getMentions().getUsers().get(0);
+            String path = DataPaths.DISCORD_USERNAME_CONNECTIONS + "/" + mention.getId() + ".txt";
+            if (!Files.exists(Paths.get(path))) {
+                channel.sendMessage("User not registered!").queue();
+                return;
+            }
+            try {
+                riotID = new String(Files.readAllBytes(Paths.get(path)));
+            } catch (Exception e) {
+                channel.sendMessage("Error getting userdata!").queue();
+                return;
+            }
+        } else {
+            riotID = args;
         }
 
-        String riotID = spl[0];
+
         String puuid = LeagueAPI.getPUUIDByRiotID(riotID);
         if (puuid == null) {
-           channel.sendMessage("This riot ID does not exist!").queue();
+           channel.sendMessage("This riot ID does not exist! (" + riotID + ")").queue();
            return;
         }
 
         Mastery bestMastery = LeagueAPI.getBestMasteryByPUUID(puuid);
         if (bestMastery == null) {
-            channel.sendMessage("Error getting mastery infos.").queue();
+            channel.sendMessage("Error getting mastery infos. (" + riotID + ")").queue();
             return;
         }
 

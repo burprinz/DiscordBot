@@ -1,7 +1,0 @@
-0	2026/01/19-02:29:39	Info	Program started
-1	2026/01/19-02:29:39	Debug	Discord-Bot starting...
-2	2026/01/19-02:29:42	Success	Discord-Bot started
-3	2026/01/19-02:29:45	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/rb5TBNXf8FVWIaLC6UA-NlFfeqMvBdlKL72UJj-z3tkb0tQii1KItnA6yJ1Sxc2nKoncx6j0ygd2Lw?api_key=RGAPI-8f6df23c-ffb3-42f7-a264-293c5d8d1e0e
-4	2026/01/19-02:29:58	Debug	GetAccountInfosByRiotID: https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/burprinz/euw?api_key=RGAPI-8f6df23c-ffb3-42f7-a264-293c5d8d1e0e
-5	2026/01/19-02:29:58	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ?api_key=RGAPI-8f6df23c-ffb3-42f7-a264-293c5d8d1e0e
-6	2026/01/19-02:29:59	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ?api_key=RGAPI-8f6df23c-ffb3-42f7-a264-293c5d8d1e0e

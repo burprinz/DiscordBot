@@ -1,0 +1,16 @@
+0	2026/01/20-11:08:47	Info	Program started
+1	2026/01/20-11:08:47	Debug	Discord-Bot starting...
+2	2026/01/20-11:08:49	Success	Discord-Bot started
+3	2026/01/20-11:09:16	Debug	luiskun joined Co-Learning Links on Albert 4
+4	2026/01/20-11:09:19	Debug	luiskun left Co-Learning Links on Albert 4
+5	2026/01/20-11:09:53	Debug	luiskun joined Othenbergstraße Ghetto braa 34537 4 life on Minecraft yikes
+6	2026/01/20-11:10:03	Debug	luiskun switched from Othenbergstraße Ghetto braa 34537 4 life on Minecraft yikes to Die Palapa on Minecraft yikes
+7	2026/01/20-11:10:12	Debug	luiskun left Die Palapa on Minecraft yikes
+8	2026/01/20-11:10:12	Debug	luiskun joined Talk 1 on Zitronenbonbons
+9	2026/01/20-11:10:18	Debug	luiskun left Talk 1 on Zitronenbonbons
+10	2026/01/20-15:14:49	Debug	floke137 joined Co-Learning Links on Albert 4
+11	2026/01/20-15:53:18	Debug	luiskun joined Co-Learning Links on Albert 4
+12	2026/01/20-15:54:04	Debug	luiskun switched from Co-Learning Links on Albert 4 to Co-Learning Rechts on Albert 4
+13	2026/01/20-15:54:07	Debug	luiskun switched from Co-Learning Rechts on Albert 4 to Co-Learning Links on Albert 4
+14	2026/01/20-15:55:05	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ?api_key=RGAPI-8f6df23c-ffb3-42f7-a264-293c5d8d1e0e
+15	2026/01/20-15:55:05	Error	Error getting Mastery infos: {"status":{"message":"Unknown apikey","status_code":401}}

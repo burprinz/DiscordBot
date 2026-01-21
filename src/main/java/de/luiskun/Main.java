@@ -1,22 +1,13 @@
 package de.luiskun;
 
 import de.luiskun.discord.DiscordBot;
-import de.luiskun.league.DataPaths;
-import de.luiskun.league.LeagueAPI;
-import de.luiskun.league.Mastery;
 import de.luiskun.log.Log;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class Main {
 
     private static DiscordBot discordBot;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {
@@ -29,7 +20,7 @@ public class Main {
         new Main();
     }
 
-    public Main() throws IOException {
+    public Main() {
         Log.info("Program started");
 
         DiscordBot discordBot = new DiscordBot();

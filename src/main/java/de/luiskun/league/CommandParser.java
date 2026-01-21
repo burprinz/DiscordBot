@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 
 public class CommandParser {
 
-    private static final String apiKey = "RGAPI-8f6df23c-ffb3-42f7-a264-293c5d8d1e0e";
+    public static final String apiKey = "RGAPI-757c657c-6b18-4f50-ac27-d68f29b4f7d3";
 
     private static final OkHttpClient client = new OkHttpClient();
 
