@@ -1,0 +1,6 @@
+0	2026/05/30-21:13:59	Info	Program started
+1	2026/05/30-21:13:59	Debug	Discord-Bot starting...
+2	2026/05/30-21:14:01	Success	Discord-Bot started
+3	2026/05/30-21:14:08	Debug	leanlasse left Talk 1 on Zitronenbonbons
+4	2026/05/30-21:14:22	Debug	susscrofa left Talk 1 on Zitronenbonbons
+5	2026/05/30-21:18:26	Debug	felipe_8 joined Talk 1 on Zitronenbonbons

@@ -1,0 +1,5 @@
+0	2026/05/30-18:45:44	Info	Program started
+1	2026/05/30-18:45:44	Debug	Discord-Bot starting...
+2	2026/05/30-18:45:46	Success	Discord-Bot started
+3	2026/05/30-18:53:27	Debug	GetAccountInfosByRiotID: https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/Effy Stonem/EUVV?api_key=RGAPI-6264a18a-24e1-401f-9d83-b72ee8dcde13
+4	2026/05/30-18:54:23	Debug	GetAccountInfosByRiotID: https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/Fool/IowLB?api_key=RGAPI-6264a18a-24e1-401f-9d83-b72ee8dcde13

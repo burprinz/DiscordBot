@@ -2,9 +2,8 @@ package de.luiskun.discord.commands.league;
 
 import de.luiskun.discord.commands.DiscordCommand;
 import de.luiskun.league.DataPaths;
-import de.luiskun.league.LeagueAPI;
-import de.luiskun.league.Mastery;
-import de.luiskun.log.Log;
+import de.luiskun.league.api.LeagueAPI;
+import de.luiskun.league.api.Mastery;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
@@ -15,8 +14,7 @@ import java.awt.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
-import java.time.temporal.TemporalAccessor;
-import java.util.Arrays;
+import java.time.ZoneId;
 
 public class GetBestMasteryCommand implements DiscordCommand {
     @Override
@@ -41,6 +39,23 @@ public class GetBestMasteryCommand implements DiscordCommand {
             riotID = args;
         }
 
+        if (riotID.equals("")) {
+            String path = DataPaths.DISCORD_USERNAME_CONNECTIONS + "/" + user.getId() + ".txt";
+            if (!Files.exists(Paths.get(path))) {
+                channel.sendMessage("You are not registered!").queue();
+                return;
+            }
+            try {
+                riotID = new String(Files.readAllBytes(Paths.get(path)));
+            } catch (Exception e) {
+                channel.sendMessage("Error getting userdata!").queue();
+                return;
+            }
+        }
+
+        if (riotID == null || riotID.equals("")) {
+            channel.sendMessage("Error getting userdata!").queue();
+        }
 
         String puuid = LeagueAPI.getPUUIDByRiotID(riotID);
         if (puuid == null) {
@@ -57,7 +72,7 @@ public class GetBestMasteryCommand implements DiscordCommand {
         EmbedBuilder eb = new EmbedBuilder();
         eb.setTitle("User: " + riotID);
         eb.setColor(Color.decode("#00b0f4"));
-        eb.setTimestamp(LocalDateTime.now());
+        eb.setTimestamp(LocalDateTime.now(ZoneId.of("Europe/Berlin")));
         eb.setAuthor("Mastery Stats (" + bestMastery.name + ")");
         eb.addField("Last time played", bestMastery.getDateString(), false);
         eb.addField("Level", ""+bestMastery.level, false);

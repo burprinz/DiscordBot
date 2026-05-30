@@ -9,7 +9,6 @@ import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.nio.file.Files;
 
 public class RegisterLeagueProfileCommand implements DiscordCommand {
 

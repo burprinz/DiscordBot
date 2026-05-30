@@ -1,0 +1,3 @@
+0	2026/05/30-21:28:27	Info	Program started
+1	2026/05/30-21:28:27	Debug	Discord-Bot starting...
+2	2026/05/30-21:28:29	Success	Discord-Bot started

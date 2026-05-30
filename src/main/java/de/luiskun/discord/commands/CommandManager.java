@@ -1,6 +1,7 @@
 package de.luiskun.discord.commands;
 
 import de.luiskun.discord.commands.league.GetBestMasteryCommand;
+import de.luiskun.discord.commands.league.GetStatsCommand;
 import de.luiskun.discord.commands.league.RegisterLeagueProfileCommand;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
@@ -18,6 +19,7 @@ public class CommandManager {
 
         this.commands.put("bestchamp", new GetBestMasteryCommand());
         this.commands.put("register", new RegisterLeagueProfileCommand());
+        this.commands.put("stats", new GetStatsCommand());
     }
 
     public boolean performCommand(String command, String args, User user, Message message, MessageChannel channel, Guild guild) {

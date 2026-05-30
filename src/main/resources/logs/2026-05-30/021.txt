@@ -1,0 +1,4 @@
+0	2026/05/30-21:29:22	Info	Program started
+1	2026/05/30-21:29:22	Debug	Discord-Bot starting...
+2	2026/05/30-21:29:25	Success	Discord-Bot started
+3	2026/05/30-21:40:19	Debug	GetAccountInfosByRiotID: https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/Der Mann vom/TUS?api_key=RGAPI-6264a18a-24e1-401f-9d83-b72ee8dcde13
