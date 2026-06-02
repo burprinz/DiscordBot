@@ -1,6 +1,0 @@
-0	2026/01/21-16:53:53	Info	Program started
-1	2026/01/21-16:53:53	Debug	Discord-Bot starting...
-2	2026/01/21-16:53:57	Success	Discord-Bot started
-3	2026/01/21-16:54:15	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ?api_key=RGAPI-94cccb51-28c2-4435-953d-94861a4af43a
-4	2026/01/21-16:54:15	Error	Error getting Mastery infos: {"status":{"message":"Unknown apikey","status_code":401}}
-5	2026/01/21-16:54:16	Debug	kablobbel joined Elo grind on Minecraft yikes

@@ -1,0 +1,42 @@
+0	2026/06/01-18:08:32	Info	Starting to download matches from registered users
+1	2026/06/01-18:08:33	Error	Invalid or expired API-Key!
+2	2026/06/01-18:08:33	Info	Creating Matchlist for anaboostpls#0069
+3	2026/06/01-18:08:43	Success	Found 194 Matches for anaboostpls#0069
+4	2026/06/01-18:08:43	Info	Creating Matchlist for BillCollect03475#3765
+5	2026/06/01-18:08:44	Success	Found 125 Matches for BillCollect03475#3765
+6	2026/06/01-18:08:44	Info	Creating Matchlist for Burprincess#420
+7	2026/06/01-18:08:44	Success	Found 23 Matches for Burprincess#420
+8	2026/06/01-18:08:44	Info	Creating Matchlist for burprinz#EUW
+9	2026/06/01-18:08:45	Success	Found 301 Matches for burprinz#EUW
+10	2026/06/01-18:08:45	Info	Creating Matchlist for der Mann vom#TUS
+11	2026/06/01-18:08:45	Success	Found 92 Matches for der Mann vom#TUS
+12	2026/06/01-18:08:45	Info	Creating Matchlist for Effy Stonem#EUVV
+13	2026/06/01-18:08:46	Success	Found 344 Matches for Effy Stonem#EUVV
+14	2026/06/01-18:08:46	Info	Creating Matchlist for Höppelepöpp Bre#EUW
+15	2026/06/01-18:08:46	Success	Found 313 Matches for Höppelepöpp Bre#EUW
+16	2026/06/01-18:08:46	Info	Creating Matchlist for Höppelepöpp Bre#EUW
+17	2026/06/01-18:08:47	Success	Found 313 Matches for Höppelepöpp Bre#EUW
+18	2026/06/01-18:08:47	Info	Creating Matchlist for JogiLöw#GER
+19	2026/06/01-18:08:47	Success	Found 39 Matches for JogiLöw#GER
+20	2026/06/01-18:08:47	Info	Creating Matchlist for Kiba7504#EUW
+21	2026/06/01-18:08:48	Success	Found 546 Matches for Kiba7504#EUW
+22	2026/06/01-18:08:48	Info	Creating Matchlist for Lathyrism#7504
+23	2026/06/01-18:08:48	Success	Found 100 Matches for Lathyrism#7504
+24	2026/06/01-18:08:48	Info	Creating Matchlist for LeckEier69Bre#3167
+25	2026/06/01-18:08:49	Success	Found 191 Matches for LeckEier69Bre#3167
+26	2026/06/01-18:08:49	Info	Creating Matchlist for Linkibu#EUW
+27	2026/06/01-18:08:49	Success	Found 85 Matches for Linkibu#EUW
+28	2026/06/01-18:08:49	Info	Creating Matchlist for Luigi Bre#EUW
+29	2026/06/01-18:08:49	Success	Found 250 Matches for Luigi Bre#EUW
+30	2026/06/01-18:08:49	Info	Creating Matchlist for MartoBre#EUW
+31	2026/06/01-18:08:50	Success	Found 587 Matches for MartoBre#EUW
+32	2026/06/01-18:08:50	Info	Creating Matchlist for njief#6913
+33	2026/06/01-18:08:50	Success	Found 217 Matches for njief#6913
+34	2026/06/01-18:08:50	Info	Creating Matchlist for Pharow7504 Bre#EUW
+35	2026/06/01-18:08:51	Success	Found 360 Matches for Pharow7504 Bre#EUW
+36	2026/06/01-18:08:51	Info	Creating Matchlist for susscrofa#7702
+37	2026/06/01-18:08:51	Success	Found 297 Matches for susscrofa#7702
+38	2026/06/01-18:08:51	Info	Creating Matchlist for Svivi#EUW
+39	2026/06/01-18:08:52	Success	Found 2 Matches for Svivi#EUW
+40	2026/06/01-18:08:52	Info	Creating Matchlist for 大海航行靠舵手#2004
+41	2026/06/01-18:08:52	Success	Found 40 Matches for 大海航行靠舵手#2004

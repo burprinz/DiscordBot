@@ -1,0 +1,4 @@
+0	2026/06/01-18:35:36	Info	Starting to download matches from registered users
+1	2026/06/01-18:35:39	Success	Downloaded 0 matches
+2	2026/06/01-18:35:39	Info	Creating AccountMatchlists
+3	2026/06/01-18:35:48	Success	AccountMatchlists created

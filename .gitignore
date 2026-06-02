@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### API-KEYS ###
+apikeys/discord_api_key
+apikeys/riot_api_key

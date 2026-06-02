@@ -1,6 +1,0 @@
-0	2026/05/30-19:14:20	Info	Program started
-1	2026/05/30-19:14:20	Debug	Discord-Bot starting...
-2	2026/05/30-19:14:22	Success	Discord-Bot started
-3	2026/05/30-19:31:34	Debug	luiskun switched from Talk 1 on Zitronenbonbons to AFK-Arena on Zitronenbonbons
-4	2026/05/30-19:45:50	Debug	luiskun switched from AFK-Arena on Zitronenbonbons to Talk 1 on Zitronenbonbons
-5	2026/05/30-20:47:43	Debug	baphometen left Talk 1 on Zitronenbonbons

@@ -1,7 +1,0 @@
-0	2026/04/30-22:29:17	Info	Program started
-1	2026/04/30-22:29:17	Debug	Discord-Bot starting...
-2	2026/04/30-22:29:19	Success	Discord-Bot started
-3	2026/04/30-22:30:40	Debug	GetAccountInfosByRiotID: https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/anaboostpls/0069?api_key=RGAPI-f9f643e2-d456-4d54-a055-d8a5d49ba680
-4	2026/04/30-22:30:40	Error	Error getting Account infos: {"status":{"message":"Unknown apikey","status_code":401}}
-5	2026/04/30-22:30:56	Debug	GetAccountInfosByRiotID: https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/olafschol/EUW?api_key=RGAPI-f9f643e2-d456-4d54-a055-d8a5d49ba680
-6	2026/04/30-22:30:56	Error	Error getting Account infos: {"status":{"message":"Unknown apikey","status_code":401}}

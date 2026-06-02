@@ -24,19 +24,22 @@ public class Log {
     public static final int INFO = 1;
     public static final int SUCCESS = 2;
     public static final int ERROR = 3;
+    public static final int DISCORD = 4;
 
     public static final Color[] typeColors = {
             Color.decode("#4fc3f7"),
             Color.decode("#81c784"),
             Color.decode("#66e2b3"),
-            Color.decode("#ef5350")
+            Color.decode("#ef5350"),
+            Color.decode("#ffa3dd")
     };
 
     public static final String[] typeStrings = {
             "Debug",
             "Info",
             "Success",
-            "Error"
+            "Error",
+            "Discord"
     };
 
     private static final Object LOCK = new Object();
@@ -104,6 +107,17 @@ public class Log {
     public static void error(String msg) {
         synchronized (LOCK) {
             LogEntry entry = new LogEntry(LocalDateTime.now(), logEntries.size(), ERROR, msg);
+            logEntries.add(entry);
+            logScreen.updateLogs(logEntries);
+            if (logEntries.size() > FILE_SIZE) {
+                save();
+            }
+        }
+    }
+
+    public static void discord(String msg) {
+        synchronized (LOCK) {
+            LogEntry entry = new LogEntry(LocalDateTime.now(), logEntries.size(), DISCORD, msg);
             logEntries.add(entry);
             logScreen.updateLogs(logEntries);
             if (logEntries.size() > FILE_SIZE) {

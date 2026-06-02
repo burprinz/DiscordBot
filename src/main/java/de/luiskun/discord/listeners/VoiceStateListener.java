@@ -13,6 +13,8 @@ public class VoiceStateListener extends ListenerAdapter {
     @Override
     public void onGuildVoiceUpdate(@NotNull GuildVoiceUpdateEvent event) {
         super.onGuildVoiceUpdate(event);
+
+        /*
         handleDebugMessage(event);
 
         Member member = event.getMember();
@@ -22,10 +24,12 @@ public class VoiceStateListener extends ListenerAdapter {
         if (before == null && after != null) {
             // User ist neu gejoint
             if (member.getUser().getId().equals("392709166575255573")) {
-                Log.debug("Lucas joined -> playing <Mann vom TUS>");
+                Log.info("Lucas joined -> playing <Mann vom TUS>");
                 Soundboard.play(event.getGuild(), after, "src/main/resources/sounds/mann_vom_tus.wav");
             }
         }
+
+         */
     }
 
     private void handleDebugMessage(GuildVoiceUpdateEvent event) {
@@ -39,19 +43,19 @@ public class VoiceStateListener extends ListenerAdapter {
             // Person joined channel
             String joinName = after.getName();
             String joinGuild = after.getGuild().getName();
-            Log.debug(username + " joined " + joinName + " on " + joinGuild);
+            Log.discord(username + " joined " + joinName + " on " + joinGuild);
         } else if (before != null && after != null) {
             // Person switched channel
             String joinName = after.getName();
             String joinGuild = after.getGuild().getName();
             String discName = before.getName();
             String discGuild = before.getGuild().getName();
-            Log.debug(username + " switched from " + discName + " on " + discGuild + " to " + joinName + " on " + joinGuild);
+            Log.discord(username + " switched from " + discName + " on " + discGuild + " to " + joinName + " on " + joinGuild);
         } else if (before != null && after == null) {
             // Person disconnected
             String discName = before.getName();
             String discGuild = before.getGuild().getName();
-            Log.debug(username + " left " + discName + " on " + discGuild);
+            Log.discord(username + " left " + discName + " on " + discGuild);
         }
     }
 

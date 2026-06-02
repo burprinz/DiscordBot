@@ -1,6 +1,6 @@
 package de.luiskun.discord;
 
-import de.luiskun.Konstanten;
+import de.luiskun.APIKeys;
 import de.luiskun.discord.commands.CommandManager;
 import de.luiskun.discord.listeners.MessageListener;
 import de.luiskun.discord.listeners.VoiceStateListener;
@@ -26,7 +26,7 @@ public class DiscordBot {
         this.cmdMan = new CommandManager();
 
         INSTANCE = this;
-        jda = JDABuilder.createDefault(Konstanten.DISCORD_TOKEN)
+        jda = JDABuilder.createDefault(APIKeys.DISCORD_API_KEY)
                 .setActivity(Activity.playing("nothing."))
                 .setStatus(OnlineStatus.ONLINE)
                 .enableIntents(GatewayIntent.GUILD_MESSAGES,

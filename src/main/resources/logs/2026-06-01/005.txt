@@ -1,0 +1,4 @@
+0	2026/06/01-18:11:47	Info	Starting to download matches from registered users
+1	2026/06/01-18:11:49	Error	Invalid or expired API-Key!
+2	2026/06/01-18:11:49	Info	Creating AccountMatchlists
+3	2026/06/01-18:11:58	Success	AccountMatchlists created

@@ -22,8 +22,13 @@ public class OverallMatchStats {
     public int surrenders;
     public int totalTimePlayed;
     public int totalTimeSpentDead;
+    public int averageGameLength;
+    public double percentageInDeathScreen;
     public int totalGoldEarned;
     public int totalGoldSpent;
+
+    public double killParticipation;
+    public double totalKDA;
 
     // Best
     public int mostKills = -1;

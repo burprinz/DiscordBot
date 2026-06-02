@@ -1,7 +1,0 @@
-0	2026/05/30-18:14:55	Info	Program started
-1	2026/05/30-18:14:55	Debug	Discord-Bot starting...
-2	2026/05/30-18:14:57	Success	Discord-Bot started
-3	2026/05/30-18:15:08	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/WoRIAXwPjHnb96SkO9dC_NNaoRnwkWt7hOAeypnnSiOnqJYUA9HB_BZEbbwFGZaEXDuZHJkqdOytnw?api_key=RGAPI-6264a18a-24e1-401f-9d83-b72ee8dcde13
-4	2026/05/30-18:15:31	Debug	leanlasse left Talk 1 on Zitronenbonbons
-5	2026/05/30-18:15:40	Debug	baphometen joined Talk 1 on Zitronenbonbons
-6	2026/05/30-18:16:14	Debug	leanlasse joined Talk 1 on Zitronenbonbons

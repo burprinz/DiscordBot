@@ -1,6 +1,0 @@
-0	2026/05/30-18:20:11	Info	Program started
-1	2026/05/30-18:20:11	Debug	Discord-Bot starting...
-2	2026/05/30-18:20:13	Success	Discord-Bot started
-3	2026/05/30-18:20:16	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ?api_key=RGAPI-6264a18a-24e1-401f-9d83-b72ee8dcde13
-4	2026/05/30-18:20:38	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/2a_7IPdUfpxMr_Y4cadlOkzUTqc6gy0llcRMt2NAMufe_6CzFM92nL951-QnTQbEaFf6RfbjDfMcyw?api_key=RGAPI-6264a18a-24e1-401f-9d83-b72ee8dcde13
-5	2026/05/30-18:20:50	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/dVtG3nXdmUct1BVzRMk0XXRy8OCRn6nC9I4PZoWl7zysIHgwpNRkceaad7HD5MElONZfG_96P7C4iA?api_key=RGAPI-6264a18a-24e1-401f-9d83-b72ee8dcde13

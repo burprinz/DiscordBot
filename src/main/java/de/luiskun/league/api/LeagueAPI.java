@@ -22,6 +22,8 @@ import java.util.Map;
 
 public class LeagueAPI {
 
+    public static final int EXPIRED_API_KEY = -1;
+
     public static String getPUUIDByRiotID(String riotID) {
         JsonObject obj = CommandParser.GetAccountInfosByRiotID(riotID);
         if (obj == null) {
@@ -33,6 +35,10 @@ public class LeagueAPI {
     public static Mastery[] getMasteriesByPUUID(String puuid) {
 
         JsonObject obj = CommandParser.GetChampionMasteriesByPUUID(puuid);
+
+        if (obj == null) {
+            return null;
+        }
 
         List<JsonElement> array = obj.get("list").getAsJsonArray().asList();
         Mastery[] result = new Mastery[array.size()];
@@ -54,7 +60,7 @@ public class LeagueAPI {
     
     public static Mastery getBestMasteryByPUUID(String puuid) {
         Mastery[] masteries =  getMasteriesByPUUID(puuid);
-        if (masteries.length > 0) {
+        if (masteries != null && masteries.length > 0) {
             return masteries[0];
         } else {
             return null;
@@ -73,14 +79,24 @@ public class LeagueAPI {
     }
 
     public static void downloadMatchesFromRegisteredUsers() {
+
+        Log.info("Starting to download matches from registered users");
+
         String[] ids = getRegisteredUserIds();
 
         int downloadCount = 0;
         for (String puuid : ids) {
             int c = downloadEveryMapIfNotAlready(puuid);
+            if (c < 0) {
+                switch (c) {
+                    case EXPIRED_API_KEY:
+                        Log.error("Invalid or expired API-Key!");
+                        return;
+                }
+            }
             downloadCount += c;
         }
-        System.out.println("Downloaded " + downloadCount + " matches");
+        Log.success("Downloaded " + downloadCount + " matches");
     }
 
     public static String[] getRegisteredUserIds() {
@@ -127,30 +143,41 @@ public class LeagueAPI {
     public static int downloadEveryMapIfNotAlready(String puuid) {
         int downloadCount = 0;
 
+        List<String> faultyMapIDs = CommandParser.getFaultyMatchIDs();
         List<String> matchIDs = getLast100MatchIdsById(puuid);
+
+        if (matchIDs == null) {
+            return EXPIRED_API_KEY;
+        }
 
         for (int i = 0; i < matchIDs.size(); i++) {
             String id = matchIDs.get(i);
             String filePath = DataPaths.LEAGUE_MATCHES + id + ".json";
-            if (!Files.exists(Paths.get(filePath))) {
+            if (!Files.exists(Paths.get(filePath)) && !faultyMapIDs.contains(id)) {
                 try {
                     Match m = getMatchInformationByMatchID(matchIDs.get(i));
                     ObjectMapper om = new ObjectMapper();
                     om.writeValue(new File(filePath), m);
+                    //System.out.println(i + " - downloaded");
+                    downloadCount++;
                 } catch (Exception e) {
-                    System.out.println(i + "ERROR DOWNLOADING, puuid: " + puuid);
+                    System.out.println(i + "ERROR DOWNLOADING, id: " + id);
+                    faultyMapIDs.add(id);
                 }
-                System.out.println(i + " - downloaded");
-                downloadCount++;
             } else {
-                System.out.println(i + " - already downloaded");
+                //System.out.println(i + " - already downloaded");
             }
         }
+        CommandParser.saveFaultyMatchIDs(faultyMapIDs);
         return downloadCount;
     }
 
     public static Match getMatchInformationByMatchID(String matchID) throws Exception{
         JsonObject rawMatch = CommandParser.requestMatchInformationByMatchID(matchID);
+        if (rawMatch == null) {
+            return null;
+        }
+
         JsonObject rawMetadata = rawMatch.getAsJsonObject("metadata");
         JsonObject rawInfos = rawMatch.getAsJsonObject("info");
 
@@ -308,6 +335,9 @@ public class LeagueAPI {
         }
 
         AccountInfo info = CommandParser.downloadAccountInfosByPuuid(puuid);
+        if (info == null) {
+            return null;
+        }
         accountInfos.put(puuid, info);
         String path = DataPaths.RANDOM_LEAGUE_ACCOUNTS + "accountInfos.json";
         ObjectMapper om = new ObjectMapper();

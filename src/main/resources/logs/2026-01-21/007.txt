@@ -1,6 +1,0 @@
-0	2026/01/21-20:40:48	Info	Program started
-1	2026/01/21-20:40:48	Debug	Discord-Bot starting...
-2	2026/01/21-20:40:51	Success	Discord-Bot started
-3	2026/01/21-20:41:16	Debug	GetAccountInfosByRiotID: https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/大海航行靠舵手/2004?api_key=RGAPI-757c657c-6b18-4f50-ac27-d68f29b4f7d3
-4	2026/01/21-20:41:16	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/0oLxnK8ztghtEmptbgodKAN7xlTBmlnhQ0gEoRM2yTUXXFdEUzOPXdwtP__o_tUso2r-ukU2boL2rA?api_key=RGAPI-757c657c-6b18-4f50-ac27-d68f29b4f7d3
-5	2026/01/21-20:41:16	Debug	GetChampionMasteriesByPUUID: https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/0oLxnK8ztghtEmptbgodKAN7xlTBmlnhQ0gEoRM2yTUXXFdEUzOPXdwtP__o_tUso2r-ukU2boL2rA?api_key=RGAPI-757c657c-6b18-4f50-ac27-d68f29b4f7d3

@@ -9,4 +9,6 @@ public class DataPaths {
     public static final String LEAGUE_MATCHES = "src/main/resources/leagueData/matches/";
 
     public static final String PLAYER_MATCH_LIST = "src/main/resources/leagueData/accountMatchlist/";
+
+    public static final String FAULTY_MATCHES = "src/main/resources/leagueData/faultyMatches.json";
 }

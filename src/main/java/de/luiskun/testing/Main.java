@@ -5,6 +5,7 @@ import de.luiskun.league.objects.Matchlist;
 import de.luiskun.league.objects.OverallMatchStats;
 import de.luiskun.league.stats.MatchEditor;
 import de.luiskun.league.stats.StatsAPI;
+import de.luiskun.log.Log;
 
 public class Main {
 
@@ -13,8 +14,14 @@ public class Main {
     }
 
     public Main() {
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            public void run() {
+                Log.save();
+            }
+        }));
+        Log.start();
         LeagueAPI.downloadMatchesFromRegisteredUsers();
         StatsAPI.createAccountMatchlists();
-        //OverallMatchStats stats = StatsAPI.getOverallMatchStats("fQkfLo2L890-QRluzPleewwVsqYhmEWYXFaF39pmLyLE1jt9Y1R1fOT3vg4D7dw-r9LPTKPxk54qfQ");
+        System.exit(0);
     }
 }

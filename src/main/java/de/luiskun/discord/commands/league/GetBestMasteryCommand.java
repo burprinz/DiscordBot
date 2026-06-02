@@ -65,7 +65,7 @@ public class GetBestMasteryCommand implements DiscordCommand {
 
         Mastery bestMastery = LeagueAPI.getBestMasteryByPUUID(puuid);
         if (bestMastery == null) {
-            channel.sendMessage("Error getting mastery infos. (" + riotID + ")").queue();
+            channel.sendMessage("Error getting mastery infos. (" + riotID + ").").queue();
             return;
         }
 

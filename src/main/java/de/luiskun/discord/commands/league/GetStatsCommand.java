@@ -80,9 +80,11 @@ public class GetStatsCommand implements DiscordCommand {
         eb.setAuthor("Stats");
         eb.addField("Overall Stats",
                 "Wins: "+stats.wins + "; Defeats:" + stats.losses + "; Surrenders:"+ stats.surrenders+ "; WR: "+String.format("%.2f", stats.winrate)+"\n"+
-                "KDA: ("+stats.totalKills+"/"+stats.totalDeaths+"/"+stats.totalAssists+"); K/D:"+String.format("%.2f", stats.totalKD)+"\n"+
+                "KDA: ("+stats.totalKills+"/"+stats.totalDeaths+"/"+stats.totalAssists+")\n"+
+                "K/D:"+String.format("%.2f", stats.totalKD)+"; KA/D:" + String.format("%.2f", stats.totalKDA) + "; Kill Participation:" + String.format("%.2f", stats.killParticipation*100) + "%\n" +
                 "Pings: "+stats.totalPings + "; Champ-Damage:"+Helpers.addIntegerPoints(stats.totalChampDamage) + "\n"+
                 "Time played: " + Helpers.getTimeString(stats.totalTimePlayed) + "; Time in Death-Screen: " + Helpers.getTimeString(stats.totalTimeSpentDead) + "\n"+
+                "Avg Game length: " + Helpers.getTimeString(stats.averageGameLength) + "; Percentage Dead: " + String.format("%.2f", stats.percentageInDeathScreen*100) + "%\n" +
                 "Gold earned: " + Helpers.addIntegerPoints(stats.totalGoldEarned) + "; Gold spent: " + Helpers.addIntegerPoints(stats.totalGoldSpent),
                 false);
         /*
@@ -110,7 +112,7 @@ public class GetStatsCommand implements DiscordCommand {
 
         String teammateStr = "";
         for (TeammateInfos infos : stats.mostPlayedCompanions) {
-            teammateStr += infos.gameName + " (" + infos.amMatches + "\t Matches)\n";
+            teammateStr += infos.gameName + " (" + infos.amMatches + "\t Matches; " + infos.wins + " Wins; "+ infos.losses + " Defeats; WR=" + String.format("%.2f", infos.winrate) + ")\n";
         }
         eb.addField("Most Frequent Teammates", teammateStr, false);
 

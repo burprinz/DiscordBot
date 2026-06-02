@@ -1,0 +1,2 @@
+You need to put the RIOT API-KEY inside a file named riot_api_key
+You need to put the DISCORD API-KEY inside a file named discord_api_key

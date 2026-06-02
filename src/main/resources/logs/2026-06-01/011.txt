@@ -1,0 +1,7 @@
+0	2026/06/01-21:44:09	Info	Program started
+1	2026/06/01-21:44:09	Info	Starting to download matches from registered users
+2	2026/06/01-21:44:09	Debug	Discord-Bot starting...
+3	2026/06/01-21:44:10	Success	Discord-Bot started
+4	2026/06/01-21:44:12	Success	Downloaded 0 matches
+5	2026/06/01-21:44:12	Info	Creating AccountMatchlists
+6	2026/06/01-21:44:21	Success	AccountMatchlists created
