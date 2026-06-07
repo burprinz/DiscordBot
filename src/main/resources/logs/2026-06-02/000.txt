@@ -1,7 +1,0 @@
-0	2026/06/02-16:45:24	Success	Done loading API Keys
-1	2026/06/02-16:45:24	Info	Program started
-2	2026/06/02-16:45:24	Debug	Discord-Bot starting...
-3	2026/06/02-16:45:24	Info	Starting to download matches from registered users
-4	2026/06/02-16:45:27	Error	Error getting infos: {"status":{"message":"Forbidden","status_code":401}}
-5	2026/06/02-16:45:27	Error	Invalid or expired API-Key!
-6	2026/06/02-16:45:27	Info	Creating AccountMatchlists

@@ -27,6 +27,6 @@ public class RegisterLeagueProfileCommand implements DiscordCommand {
             channel.sendMessage("Error registering").queue();
             return;
         }
-        channel.sendMessage("Successfully registered!").queue();
+        channel.sendMessage("Successfully registered League Account!").queue();
     }
 }

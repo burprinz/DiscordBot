@@ -1,0 +1,34 @@
+{
+  "node": {
+    "id": 33363,
+    "title": "\"Eiyuu\" Kaitai",
+    "main_picture": {
+      "medium": "https://cdn.myanimelist.net/images/anime/1192/112238.jpg",
+      "large": "https://cdn.myanimelist.net/images/anime/1192/112238l.jpg"
+    },
+    "media_type": "ova",
+    "num_episodes": 1,
+    "average_episode_duration": 1669,
+    "genres": [
+      {
+        "id": 4,
+        "name": "Comedy"
+      },
+      {
+        "id": 8,
+        "name": "Drama"
+      },
+      {
+        "id": 62,
+        "name": "Isekai"
+      }
+    ]
+  },
+  "list_status": {
+    "status": "completed",
+    "score": 8,
+    "num_episodes_watched": 1,
+    "is_rewatching": false,
+    "updated_at": "2022-01-01T16:00:56+00:00"
+  }
+},

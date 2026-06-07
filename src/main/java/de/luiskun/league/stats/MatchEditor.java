@@ -3,14 +3,10 @@ package de.luiskun.league.stats;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import de.luiskun.league.DataPaths;
-import de.luiskun.league.api.LeagueAPI;
-import de.luiskun.league.objects.AccountInfo;
 import de.luiskun.league.objects.Match;
 import de.luiskun.league.objects.MatchParticipant;
 import de.luiskun.league.objects.Matchlist;
-import de.luiskun.log.Log;
 
-import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -63,8 +59,6 @@ public class MatchEditor {
         } catch (IOException e) {
             System.out.println("ERROR writing match list" + e.getMessage());
         }
-
-        System.out.println("Found " + mlist.getMatchIDs().size() + " Matches for " + puuid);
 
     }
 

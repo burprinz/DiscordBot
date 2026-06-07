@@ -1,11 +1,11 @@
 package de.luiskun.testing;
 
-import de.luiskun.league.api.LeagueAPI;
-import de.luiskun.league.objects.Matchlist;
-import de.luiskun.league.objects.OverallMatchStats;
-import de.luiskun.league.stats.MatchEditor;
-import de.luiskun.league.stats.StatsAPI;
+import de.luiskun.APIKeys;
 import de.luiskun.log.Log;
+import de.luiskun.apis.MyAnimeListAPI;
+import de.luiskun.myanimelist.objects.Anime;
+import de.luiskun.myanimelist.objects.AnimeGenre;
+import de.luiskun.myanimelist.objects.AnimeList;
 
 public class Main {
 
@@ -14,14 +14,20 @@ public class Main {
     }
 
     public Main() {
+
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             public void run() {
                 Log.save();
             }
         }));
         Log.start();
+        APIKeys.loadAPIKeys();
+        /*
         LeagueAPI.downloadMatchesFromRegisteredUsers();
         StatsAPI.createAccountMatchlists();
+        System.exit(0);
+         */
+
         System.exit(0);
     }
 }

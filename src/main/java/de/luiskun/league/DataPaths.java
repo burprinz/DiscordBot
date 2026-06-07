@@ -11,4 +11,7 @@ public class DataPaths {
     public static final String PLAYER_MATCH_LIST = "src/main/resources/leagueData/accountMatchlist/";
 
     public static final String FAULTY_MATCHES = "src/main/resources/leagueData/faultyMatches.json";
+
+
+    public static final String DISCORD_MAL_ACCOUNT_CONNECTIONS = "src/main/resources/malData/accounts";
 }

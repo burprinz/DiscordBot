@@ -12,6 +12,7 @@ public class APIKeys {
      */
     public static String RIOT_API_KEY = "";
     public static String DISCORD_API_KEY = "";
+    public static String MAL_API_KEY = "";
 
     public static void loadAPIKeys() {
         try {
@@ -24,6 +25,12 @@ public class APIKeys {
             DISCORD_API_KEY = new String(Files.readAllBytes(Paths.get("apikeys/discord_api_key")));
         } catch (IOException e) {
             Log.error("Error loading Discord API key");
+            e.printStackTrace();
+        }
+        try {
+            MAL_API_KEY = new String(Files.readAllBytes(Paths.get("apikeys/mal_api_key")));
+        } catch (IOException e) {
+            Log.error("Error loading MAL API key");
             e.printStackTrace();
         }
         Log.success("Done loading API Keys");

@@ -1,8 +1,6 @@
 package de.luiskun.discord.commands;
 
-import de.luiskun.discord.commands.league.GetBestMasteryCommand;
-import de.luiskun.discord.commands.league.GetStatsCommand;
-import de.luiskun.discord.commands.league.RegisterLeagueProfileCommand;
+import de.luiskun.discord.commands.league.*;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
@@ -17,9 +15,14 @@ public class CommandManager {
     public CommandManager() {
         this.commands = new ConcurrentHashMap<>();
 
-        this.commands.put("bestchamp", new GetBestMasteryCommand());
-        this.commands.put("register", new RegisterLeagueProfileCommand());
-        this.commands.put("stats", new GetStatsCommand());
+        this.commands.put("help", new HelpCommand());
+
+        this.commands.put("lol-bestchamp", new GetBestMasteryCommand());
+        this.commands.put("lol-register", new RegisterLeagueProfileCommand());
+        this.commands.put("lol-stats", new GetLeagueStatsCommand());
+
+        this.commands.put("mal-register", new RegisterMALProfileCommand());
+        this.commands.put("mal-stats", new GetAnimelistStatsCommand());
     }
 
     public boolean performCommand(String command, String args, User user, Message message, MessageChannel channel, Guild guild) {

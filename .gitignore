@@ -40,3 +40,4 @@ build/
 ### API-KEYS ###
 apikeys/discord_api_key
 apikeys/riot_api_key
+apikeys/mal_api_key

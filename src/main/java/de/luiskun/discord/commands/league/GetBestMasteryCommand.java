@@ -2,8 +2,8 @@ package de.luiskun.discord.commands.league;
 
 import de.luiskun.discord.commands.DiscordCommand;
 import de.luiskun.league.DataPaths;
-import de.luiskun.league.api.LeagueAPI;
-import de.luiskun.league.api.Mastery;
+import de.luiskun.apis.LeagueAPI;
+import de.luiskun.league.objects.Mastery;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
