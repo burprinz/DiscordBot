@@ -1,6 +1,8 @@
 package de.luiskun.discord.commands;
 
 import de.luiskun.discord.commands.league.*;
+import de.luiskun.discord.commands.mal.GetAnimelistStatsCommand;
+import de.luiskun.discord.commands.mal.RegisterMALProfileCommand;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
@@ -20,6 +22,7 @@ public class CommandManager {
         this.commands.put("lol-bestchamp", new GetBestMasteryCommand());
         this.commands.put("lol-register", new RegisterLeagueProfileCommand());
         this.commands.put("lol-stats", new GetLeagueStatsCommand());
+        this.commands.put("lol-stats-img", new GetLeagueStatsImageCommand());
 
         this.commands.put("mal-register", new RegisterMALProfileCommand());
         this.commands.put("mal-stats", new GetAnimelistStatsCommand());

@@ -1,0 +1,2 @@
+0	2026/07/31-20:09:55	Success	Done loading API Keys
+1	2026/07/31-20:09:56	Error	Error getting infos: {"status":504,"type":"BadResponseException","message":"Jikan failed to connect to MyAnimeList. MyAnimeList may be down\/unavailable or refuses to connect","error":null}

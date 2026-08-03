@@ -19,6 +19,7 @@ public class HelpCommand implements DiscordCommand {
         lolCommands += "- !lol-register <name#tag>\n";
         lolCommands += "- !lol-bestchamp <none/name#tag/@discordname>\n";
         lolCommands += "- !lol-stats <none/name#tag/@discordname>\n";
+        lolCommands += "- !lol-stats-img <none/name#tag/@discordname>\n";
         eb.addField("League Commands", lolCommands, false);
 
         String malCommands = "";

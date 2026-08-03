@@ -1,4 +1,4 @@
-package de.luiskun.discord.commands.league;
+package de.luiskun.discord.commands.mal;
 
 import de.luiskun.discord.commands.DiscordCommand;
 import de.luiskun.league.DataPaths;

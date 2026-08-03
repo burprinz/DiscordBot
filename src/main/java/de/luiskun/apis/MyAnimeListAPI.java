@@ -20,13 +20,50 @@ public class MyAnimeListAPI {
 
     private static final OkHttpClient client = new OkHttpClient();
 
+
     public static AnimeList getAnimeList(String username) {
+        return jsonToAnimeList(getMyAnimeListJson(username, HTTPLinks.MAL_STATS_SETTINGS));
+    }
+
+
+    public static List<Character> getAnimeCharacters(int animeID) {
+        String url = HTTPLinks.ANIME_CHARACTER_LIST(animeID);
+
+        List<Character> result = new ArrayList<>();
+
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        try (Response response = client.newCall(request).execute()) {
+            if (response.isSuccessful()) {
+                String data =  response.body().string();
+
+                System.out.println(data);
+            } else {
+                Log.error("Error getting infos: " + response.body().string());
+                return null;
+            }
+        } catch (IOException e) {
+            Log.error("Could not retrieve data: " + e.getMessage());
+            return null;
+        }
+
+        return result;
+    }
+
+
+    public static List<Integer> getFinishedAnimeListIDs(String username) {
+        return jsonToFinishedIDList(getMyAnimeListJson(username, HTTPLinks.MAL_STATS_ONLY_ANIME_IDS));
+    }
+
+    private static String getMyAnimeListJson(String username, String fields) {
         final int limit = 1000;
         int offset = 0;
 
         List<String> result = new ArrayList<>();
         while (true) {
-            String url = HTTPLinks.MAL_STATS(username)
+            String url = HTTPLinks.MAL_STATS(username, fields)
                     +"&limit="+limit
                     +"&offset="+offset;
 
@@ -59,7 +96,20 @@ public class MyAnimeListAPI {
             return null;
         }
 
-        return jsonToAnimeList(mergePages(result));
+        return mergePages(result);
+    }
+
+    private static List<Integer> jsonToFinishedIDList(String json) {
+        JsonObject object = JsonParser.parseString(json).getAsJsonObject();
+        List<JsonElement> animes = object.get("data").getAsJsonArray().asList();
+        List<Integer> result = new ArrayList<>();
+        for (JsonElement je : animes) {
+            JsonObject obj = je.getAsJsonObject();
+            if (obj.get("list_status").getAsJsonObject().get("status").getAsString().equals("completed")) {
+                result.add(obj.getAsJsonObject("node").get("id").getAsInt());
+            }
+        }
+        return result;
     }
 
     private static AnimeList jsonToAnimeList(String json) {

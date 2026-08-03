@@ -1,0 +1,7 @@
+0	2026/06/20-21:29:22	Success	Done loading API Keys
+1	2026/06/20-21:29:22	Info	Starting to download matches from registered users
+2	2026/06/20-21:29:22	Info	Program started
+3	2026/06/20-21:29:22	Debug	Discord-Bot starting...
+4	2026/06/20-21:29:24	Success	Discord-Bot started
+5	2026/06/20-21:29:26	Success	Downloaded 2 matches
+6	2026/06/20-21:29:26	Info	Creating AccountMatchlists

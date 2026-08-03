@@ -9,8 +9,13 @@ import de.luiskun.league.DataPaths;
 import de.luiskun.league.objects.*;
 import de.luiskun.log.Log;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -113,9 +118,9 @@ public class LeagueAPI {
     public static AccountInfo[] getRegisteredUsers() {
         File[] accounts = new File(DataPaths.LEAGUE_ACCOUNTS).listFiles();
         AccountInfo[] result = new AccountInfo[accounts.length];
+        ObjectMapper om = new ObjectMapper();
         for (int i = 0; i < accounts.length; i++) {
             try {
-                ObjectMapper om = new ObjectMapper();
                 result[i] = om.readValue(new String(Files.readAllBytes(Paths.get(accounts[i].getPath()))), AccountInfo.class);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -379,6 +384,25 @@ public class LeagueAPI {
             if (i != null && i.getPuuid().equals(puuid)) {
                 return i;
             }
+        }
+        return null;
+    }
+
+    public static AccountInfoV4 getAccountInfoV4ByPuuid(String puuid) {
+        AccountInfoV4 infos = CommandParser.downloadV4AccountInfosByPuuid(puuid);
+        return infos;
+    }
+
+    public static BufferedImage getProfilePicByPuuid(String puuid) {
+        String picID = ""+getAccountInfoV4ByPuuid(puuid).profileIconId;
+        String currentAPIVersion = DDragonAPI.getNewestAPIVersion();
+        String imgLink = HTTPLinks.DDRAGON_PROFILE_PIC(currentAPIVersion, picID);
+        try {
+            return ImageIO.read(new URI(imgLink).toURL());
+        } catch (IOException e) {
+            Log.error("Error getting profile pic for puuid: " + e.getMessage());
+        } catch (URISyntaxException e) {
+            Log.error("Error converting URI to URL: " + e.getMessage());
         }
         return null;
     }

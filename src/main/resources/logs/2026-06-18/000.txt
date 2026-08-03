@@ -1,0 +1,8 @@
+0	2026/06/18-19:09:16	Success	Done loading API Keys
+1	2026/06/18-19:09:16	Info	Program started
+2	2026/06/18-19:09:16	Info	Starting to download matches from registered users
+3	2026/06/18-19:09:16	Debug	Discord-Bot starting...
+4	2026/06/18-19:09:18	Error	Error getting infos: {"status":{"message":"Unknown apikey","status_code":401}}
+5	2026/06/18-19:09:18	Error	Invalid or expired API-Key!
+6	2026/06/18-19:09:18	Info	Creating AccountMatchlists
+7	2026/06/18-19:09:19	Success	Discord-Bot started

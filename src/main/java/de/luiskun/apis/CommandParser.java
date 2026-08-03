@@ -7,11 +7,10 @@ import com.google.gson.JsonParser;
 import de.luiskun.APIKeys;
 import de.luiskun.league.DataPaths;
 import de.luiskun.league.objects.AccountInfo;
+import de.luiskun.league.objects.AccountInfoV4;
 import de.luiskun.league.objects.MatchIDList;
 import de.luiskun.log.Log;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,81 +23,15 @@ import java.util.List;
 
 public class CommandParser {
 
-    private static final OkHttpClient client = new OkHttpClient();
 
     private static Gson gson = new Gson();
-
-    /**
-     * Requestet dinge von der Riot-API
-     * @param url die request-URL
-     * @return das JSON-Objekt
-     */
-    public static JsonObject request(String url) {
-        Request request = new Request.Builder().url(url).build();
-
-        try (Response response = client.newCall(request).execute()) {
-            if (response.isSuccessful()) {
-                String json = response.body().string();
-                return JsonParser.parseString(json).getAsJsonObject();
-            } else {
-                Log.error("Error getting infos: " + response.body().string());
-                return null;
-            }
-        } catch (IOException e) {
-            Log.error("Could not retrieve data: " + e.getMessage());
-            return null;
-        }
-    }
-
-    /**
-     * Requestet dinge von der Riot-API
-     * @param url die request-URL
-     * @return das JSON-Objekt
-     */
-    public static String requestRawJson(String url) {
-        Request request = new Request.Builder().url(url).build();
-
-        try (Response response = client.newCall(request).execute()) {
-            if (response.isSuccessful()) {
-                return response.body().string();
-            } else {
-                Log.error("Error getting infos: " + response.body().string());
-                return null;
-            }
-        } catch (IOException e) {
-            Log.error("Could not retrieve data: " + e.getMessage());
-            return null;
-        }
-    }
-
-    /**
-     * Requestet dinge von der Riot-API
-     * @param url die request-URL
-     * @return das JSON-Objekt
-     */
-    public static JsonObject requestAsList(String url) {
-        Request request = new Request.Builder().url(url).build();
-
-        try (Response response = client.newCall(request).execute()) {
-            if (response.isSuccessful()) {
-                String json  = "{list:" + response.body().string() + "}";
-                return JsonParser.parseString(json).getAsJsonObject();
-            } else {
-                Log.error("Error getting infos: " + response.body().string());
-                return null;
-            }
-        } catch (IOException e) {
-            Log.error("Could not retrieve data: " + e.getMessage());
-            return null;
-        }
-    }
 
     /**
      * Liest die Accountinformationen von einem League-Account aus
      * @param riotID name#EUW
      * @return die Informationen als JSON-Objekt
      */
-    public static final JsonObject GetAccountInfosByRiotID(String riotID) {
+    public static JsonObject GetAccountInfosByRiotID(String riotID) {
         File[] retrievedData = new File(DataPaths.LEAGUE_ACCOUNTS).listFiles();
         for (File file : retrievedData) {
             if (file.getName().equals(riotID + ".json")) {
@@ -116,7 +49,7 @@ public class CommandParser {
         String url = HTTPLinks.LEAGUE_ACCOUNT_BY_RIOT_ID + name + "/" + tagline + "?api_key=" + APIKeys.RIOT_API_KEY;
         Log.debug("GetAccountInfosByRiotID: " + url);
 
-        String json = requestRawJson(url);
+        String json = Requester.requestRawJson(url);
         if (json != null) {
             try (PrintWriter out = new PrintWriter(DataPaths.LEAGUE_ACCOUNTS + "/" + riotID + ".json")) {
                 out.println(json);
@@ -136,7 +69,7 @@ public class CommandParser {
     public static JsonObject GetChampionMasteriesByPUUID(String puuid) {
         String url = HTTPLinks.LEAGUE_MASTERIES_BY_PUUID + puuid + "?api_key=" + APIKeys.RIOT_API_KEY;
         Log.debug("GetChampionMasteriesByPUUID: " + url);
-        return requestAsList(url);
+        return Requester.requestAsList(url);
     }
 
     /**
@@ -146,7 +79,7 @@ public class CommandParser {
      */
     public static JsonObject requestLast100MatchIDsByPUUID(String puuid) {
         String url = HTTPLinks.LEAGUE_MATCH_HISTORY_BY_PUUID + puuid + "/ids?start=0&count=100&api_key=" + APIKeys.RIOT_API_KEY;
-        return requestAsList(url);
+        return Requester.requestAsList(url);
     }
 
     /**
@@ -156,7 +89,7 @@ public class CommandParser {
      */
     public static JsonObject requestMatchInformationByMatchID(String matchID) {
         String url = HTTPLinks.LEAGUE_MATCH_DATA_BY_MATCH_ID + matchID + "?api_key=" + APIKeys.RIOT_API_KEY;
-        return request(url);
+        return Requester.request(url);
     }
 
     /**
@@ -168,7 +101,7 @@ public class CommandParser {
         String url = HTTPLinks.LEAGUE_ACCOUNT_BY_PUUID + puuid + "?api_key=" + APIKeys.RIOT_API_KEY;
         System.out.println("GetAccountInfosByPUUID: " + url);
 
-        String json = requestRawJson(url);
+        String json = Requester.requestRawJson(url);
         if  (json != null) {
             return gson.fromJson(json, AccountInfo.class);
         } else {
@@ -196,7 +129,7 @@ public class CommandParser {
     }
 
     /**
-     * Speichert eine neue fehlerhafte MatchID
+     * Speichert eine neue fehlerhafte MatchID.
      * @param faultyMatchIDs die ID
      */
     public static void saveFaultyMatchIDs(List<String> faultyMatchIDs) {
@@ -210,4 +143,22 @@ public class CommandParser {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Gibbt die v4 AccountInfos einer ID.
+     * @param puuid die ID
+     * @return die AccountInfos
+     */
+    public static AccountInfoV4 downloadV4AccountInfosByPuuid(String puuid) {
+        String url = HTTPLinks.LEAGUE_ACCOUNT_V4_BY_PUUID(puuid);
+        System.out.println("GetAccountV4InfosByPUUID: " + url);
+        String json = Requester.requestRawJson(url);
+        if  (json != null) {
+            return gson.fromJson(json, AccountInfoV4.class);
+        } else {
+            return null;
+        }
+    }
+
+
 }
